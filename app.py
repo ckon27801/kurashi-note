@@ -1250,7 +1250,7 @@ with analysis_tab:
                             api_key=api_key
                         )
 
-                        jls_extract_var = contents
+                        
                         response = client.models.generate_content(
     model="gemini-2.5-flash-lite",
     contents=prompt,
