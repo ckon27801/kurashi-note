@@ -1251,15 +1251,11 @@ with analysis_tab:
                         )
 
                         jls_extract_var = contents
-                        response = (
-                            client.models
-                            .generate_content(
-                                model=(
-                                   "gemini-2.5-flash-lite"
-                                ),
-                                jls_extract_var=prompt,
-                            )
-                        )
+                        response = client.models.generate_content(
+    model="gemini-2.5-flash-lite",
+    contents=prompt,
+)
+                        
 
                     if response.text:
 
